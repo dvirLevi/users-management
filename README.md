@@ -1,4 +1,4 @@
-# user-interface-for-register
+# users-management
 
 ## Project setup
 ```
