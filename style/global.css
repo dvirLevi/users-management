@@ -75,14 +75,14 @@ body {
   min-height: 85vh;
 }
 
-/* .router-link-exact-active {
+.router-link-exact-active {
   color: #ff6868;
   font-weight: bold;
 }
 
 .router-link-exact-active:hover {
   color: #ff6868;
-} */
+}
 
 .desktop {
   display: block;
@@ -112,6 +112,11 @@ input {
   cursor: pointer;
 }
 
+form input, .vselect {
+  margin: 10px;
+  width: 30%;
+}
+
 @media (max-width: 767.98px) {
   .desktop {
     display: none;
@@ -120,9 +125,14 @@ input {
   .mobile {
     display: block;
   }
-.container {
-  padding: 0px !important;
-}
+
+  .container {
+    padding: 0px !important;
+  }
+
+  form input, .vselect {
+    width: 100%;
+  }
 
 
 }

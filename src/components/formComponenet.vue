@@ -38,73 +38,42 @@
 <script>
   // @ is an alias to /src
   // import HelloWorld from '@/components/HelloWorld.vue'
-  import Swal from 'sweetalert2'
 
   export default {
-    name: 'Home',
+    name: 'formComponenet',
     components: {
       // HelloWorld
+    },
+    props: {
+      fields: Array,
+      textButt: String,
+      ifDone: Boolean
     },
     data() {
       return {
         data: {
-          companyName: "",
-          userName: "",
-          password: "",
-          emailAddress: ""
+          
         },
         validationPassword: "",
-        textButt: "send"
       }
     },
     methods: {
-      async sendData() {
-        if (this.data.password === this.validationPassword) {
-          try {
-            if (this.textButt === "send") {
-              this.textButt = "await...";
-              await this.$store.dispatch('createAccount', this.data);
-              this.data = {
-                companyName: "",
-                userName: "",
-                password: "",
-                emailAddress: ""
-              };
-              Swal.fire({
-                icon: 'success',
-                title: 'success',
-                text: 'The registration was successful!',
-                timer: 1500
-              });
-              this.textButt = "send";
-              this.$router.push('/managementUsers/addUsers');
-            }
-          } catch (err) {
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Something went wrong!',
-              timer: 1500
-            });
-            this.textButt = "send";
-          }
-        } else {
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Passwords not corresponding',
-            timer: 1500
-          });
-        }
+      sendData() {
+
       },
     }
   }
 </script>
 
 <style scoped>
- 
+  form input {
+    margin: 10px;
+    width: 30%;
+  }
 
   @media (max-width: 767.98px) {
-   
+    form input {
+      width: 100%;
+    }
   }
 </style>
