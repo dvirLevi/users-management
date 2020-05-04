@@ -76,7 +76,7 @@
               this.data = {
                 email: "",
                 password: "",
-                listOfIps: "",
+                listOfIps: [],
                 listOfProtocols: "",
                 accountId: this.accountId
               };
