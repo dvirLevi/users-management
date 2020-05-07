@@ -54,7 +54,7 @@
           password: "",
           listOfIps: [],
           listOfProtocols: "",
-          accountId: this.accountId
+          accountId: ""
         },
         validationPassword: "",
         ip: "",
@@ -69,10 +69,13 @@
         }
       },
       async sendData() {
+        
         if (this.data.password === this.validationPassword && this.data.listOfIps.length) {
           try {
             if (this.textButt === "send") {
               this.textButt = "await...";
+              this.data.accountId = this.accountId;
+              console.log(this.data.accountId)
               await this.$store.dispatch('addUser', this.data);
               this.data = {
                 email: "",
