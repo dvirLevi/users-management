@@ -37,7 +37,6 @@
 
 <script>
   // @ is an alias to /src
-  // import HelloWorld from '@/components/HelloWorld.vue'
   import Swal from 'sweetalert2'
 
   export default {
@@ -77,7 +76,7 @@
                 timer: 1500
               });
               this.textButt = "send";
-              this.$router.push('/managementUsers/addUsers');
+              this.$router.push('/managementUsers/');
             }
           } catch (err) {
             Swal.fire({

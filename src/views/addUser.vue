@@ -3,7 +3,7 @@
     <div class="col">
       <form class="w-100 center-all" @submit.prevent="sendData">
         <div class="w-100 center-all">
-          <input type="text" placeholder="Add ip" v-model="ip" required>
+          <input type="text" placeholder="Add ip" v-model="ip">
           <div class="w-100 center-all">
             <p v-for="item in data.listOfIps" class="p-1" :key="item">{{item}}</p>
           </div>
@@ -39,6 +39,7 @@
   // import HelloWorld from '@/components/HelloWorld.vue'
   import vSelect from 'vue-select'
   import 'vue-select/dist/vue-select.css'
+  import Swal from 'sweetalert2'
 
   export default {
     name: 'addUser',

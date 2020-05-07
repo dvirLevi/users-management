@@ -45,7 +45,7 @@ export default new Vuex.Store({
     getAllUsers(store) {
       return new Promise(async (resolve, reject) => {
         try {
-          let res = await postService.get(`/account/${store.state.userId}/user/getAllUsers`);
+          let res = await postService.get(`/account/${store.state.userId}/getAllUsersForThisAccount`);
           store.commit('pushAllUsers', res);
           resolve(res)
         } catch (err) {

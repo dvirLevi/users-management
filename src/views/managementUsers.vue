@@ -29,18 +29,18 @@
       return {
         links: [
           {
-            text: "Add user",
-            link: "/addUser",
+            text: "Show all users",
+            link: "/",
             id: 1
           },
+          // {
+          //   text: "Show connected users",
+          //   link: "/connectedUsers",
+          //   id: 2
+          // },
           {
-            text: "Show connected users",
-            link: "/connectedUsers",
-            id: 2
-          },
-          {
-            text: "Show all users",
-            link: "/showUsers",
+            text: "Add user",
+            link: "/addUser",
             id: 3
           },
         ]
