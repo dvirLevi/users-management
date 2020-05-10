@@ -14,10 +14,8 @@ const postService = {
                     body: objtojson
                 });
                 const json = await response.json();
-                // return json
                 resolve(json)
             } catch (err) {
-                // return err
                 reject(err)
             }
         })
